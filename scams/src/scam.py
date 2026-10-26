@@ -16,6 +16,9 @@ def load_ftc():
 
 def population():
     """US resident population, July 1 estimates (Census Bureau; Vintage 2019 for 2019, Vintage 2024 for 2020 to 2024)."""
+    cached = PROC / "population.csv"
+    if cached.exists():
+        return pd.read_csv(cached, index_col=0).iloc[:, 0].astype(int).rename("population")
     a = pd.read_excel(RAW / "census_2010_2019.xlsx", header=None)
     b = pd.read_excel(RAW / "census_2020_2024.xlsx", header=None)
     old = dict(zip(a.iloc[3, 3:].astype(float).astype(int), a.iloc[4, 3:].astype(float)))
