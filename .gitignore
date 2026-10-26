@@ -5,3 +5,4 @@ credit-risk/data/raw/
 complaints/data/raw/
 complaints/data/processed/complaints_all.parquet
 scams/data/raw/
+app-reviews/data/raw/
