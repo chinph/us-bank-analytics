@@ -7,3 +7,6 @@ matplotlib>=3.8
 streamlit>=1.40
 jupyter
 nbconvert
+pyarrow>=15
+pdfplumber>=0.11
+openpyxl>=3.1

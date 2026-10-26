@@ -2,3 +2,6 @@
 __pycache__/
 .ipynb_checkpoints/
 credit-risk/data/raw/
+complaints/data/raw/
+complaints/data/processed/complaints_all.parquet
+scams/data/raw/
